@@ -1,0 +1,596 @@
+/* =========================================
+   1. RESET DAN PENGATURAN DASAR
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f7fa;
+    color: #334e68;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    line-height: 1.8;
+}
+
+/* =========================================
+   2. HEADER DAN NAVBAR
+========================================= */
+
+header {
+    position: relative;
+    overflow: hidden;
+    padding: 25px 8% 70px;
+    background: linear-gradient(135deg, #102a43, #176b87);
+    color: #ffffff;
+}
+
+.navbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #e5f8ff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffcc66;
+}
+
+/* =========================================
+   3. HERO SECTION (TANPA ILUSTRASI)
+========================================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 0 35px;
+}
+
+.hero-text {
+    max-width: 750px;
+}
+
+.label {
+    margin-bottom: 18px;
+    color: #a8f0e1;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+}
+
+.deskripsi {
+    margin-bottom: 28px;
+    color: #d9edf7;
+    font-size: 17px;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 9px;
+    background: #ffcc66;
+    color: #102a43;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+.tombol:hover {
+    transform: translateY(-3px);
+    background: #ffe29a;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   4. KONTEN UTAMA
+========================================= */
+
+main {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: -30px auto 0;
+    padding: 0 20px 45px;
+}
+
+section {
+    margin-bottom: 25px;
+    padding: 30px;
+    border: 1px solid rgba(220, 233, 242, 0.7);
+    border-radius: 17px;
+    background: #ffffff;
+    box-shadow: 0 8px 28px rgba(16, 42, 67, 0.07);
+    scroll-margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 12px 32px rgba(16, 42, 67, 0.1);
+}
+
+section h2 {
+    margin: 12px 0 18px;
+    color: #102a43;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+section h3 {
+    margin-bottom: 10px;
+    color: #176b87;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+section ul,
+section ol {
+    margin: 12px 0;
+    padding-left: 23px;
+}
+
+.kategori {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 30px;
+    background: #e2f6f6;
+    color: #176b75;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+/* Kutipan */
+blockquote {
+    margin-top: 20px;
+    padding: 17px 20px;
+    border-left: 5px solid #38a3b5;
+    border-radius: 0 10px 10px 0;
+    background: #edf9fc;
+    color: #176b87;
+    font-style: italic;
+}
+
+/* =========================================
+   5. KARTU TEORI ATOM & STYLING GAMBAR
+========================================= */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 25px;
+    border: 1px solid #d5eaf0;
+    border-radius: 15px;
+    background: #f3fafc;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #8bd4e2;
+    box-shadow: 0 12px 25px rgba(23, 107, 135, 0.12);
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+/* Styling untuk wadah dan tag gambar materi */
+.card-image-box {
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-materi {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* =========================================
+   6. DIAGRAM STRUKTUR ATOM
+========================================= */
+
+.diagram {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.elektroda {
+    min-width: 0;
+    padding: 22px 14px;
+    border: 2px solid;
+    border-radius: 14px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.elektroda p {
+    margin-bottom: 8px;
+}
+
+.seng {
+    border-color: #9baab7;
+    background: #edf2f6;
+}
+
+.tembaga {
+    border-color: #d47a4b;
+    background: #fff1e8;
+}
+
+.elektroda span {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.arah-elektron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #176b87;
+}
+
+.arah-elektron strong {
+    font-size: 35px;
+}
+
+/* =========================================
+   7. RUMUS DAN CONTOH
+========================================= */
+
+.rumus {
+    margin: 20px 0;
+    padding: 22px;
+    border: 1px solid #c9edf2;
+    border-radius: 13px;
+    background: #eaf8fb;
+    color: #102a43;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rumus p {
+    margin: 8px 0 0;
+}
+
+.rumus-besar {
+    font-size: 25px;
+}
+
+.contoh {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f3f8fb;
+}
+
+.contoh p {
+    margin-bottom: 5px;
+}
+
+.contoh hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #d5e4ec;
+}
+
+mark {
+    padding: 3px 6px;
+    border-radius: 5px;
+    background: #ffedaa;
+    color: #263849;
+}
+
+/* =========================================
+   8. TABEL PERBANDINGAN
+========================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+th {
+    background: #102a43;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid #dce6ed;
+    text-align: left;
+    vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+    background: #f0f7fa;
+}
+
+tbody tr:hover {
+    background: #e3f5f8;
+}
+
+/* =========================================
+   9. KUIS INTERAKTIF
+========================================= */
+
+#formKuis label {
+    display: block;
+    margin: 5px 0;
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#formKuis label:hover {
+    background: #edf8fb;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #176b87;
+}
+
+.tombol-kuis {
+    margin-top: 12px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 9px;
+    background: #176b87;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tombol-kuis:hover {
+    background: #102a43;
+    transform: translateY(-2px);
+}
+
+#hasil {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#hasil.benar {
+    color: #16845b;
+}
+
+#hasil.salah {
+    color: #c34c42;
+}
+
+#hasil.peringatan {
+    color: #a66b00;
+}
+
+/* =========================================
+   10. REFERENSI DAN TEKS
+========================================= */
+
+.referensi li {
+    margin-bottom: 8px;
+}
+
+section a {
+    color: #087f9c;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #102a43;
+    text-decoration: underline;
+}
+
+small {
+    color: #627d98;
+    font-size: 13px;
+}
+
+/* =========================================
+   11. FOOTER
+========================================= */
+
+footer {
+    padding: 35px 20px;
+    background: #102a43;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+    color: #b9f5ff;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    color: #b9cbd8;
+    font-size: 13px;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #a8f0e1;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffcc66;
+}
+
+/* =========================================
+   12. RESPONSIVE TABLET DAN HP
+========================================= */
+
+@media (max-width: 800px) {
+    header {
+        padding: 20px 6% 55px;
+    }
+
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        padding: 50px 0 55px;
+        text-align: left;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    section {
+        padding: 23px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        gap: 8px 14px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .deskripsi {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    .diagram {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .arah-elektron strong {
+        transform: rotate(90deg);
+    }
+
+    .rumus-besar {
+        font-size: 19px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
